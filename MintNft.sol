@@ -1363,7 +1363,7 @@ contract ShadowDescendants2 is ERC721A, Ownable, Pausable {
     uint256 public cost = 0.07 ether;
     uint256 public presale_price = 0.05 ether;
     uint256 public maxSupply = 8888;
-    uint8 public maxMintPerTransaction = 25;
+    uint8 public maxMintPerTransaction = 15;
 
     bool public reveal = false;
     bool public presale = true;
