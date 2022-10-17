@@ -1497,8 +1497,8 @@ contract ShadowDescendants2 is ERC721A, Ownable, Pausable {
         require(_mintAmount > 0);
         require(supply + _mintAmount <= maxSupply);
         (bool isWhiteList, ) = isWhitelistedUser(msg.sender);
-        require(isWhiteList, "Shadow Descendants 2.0: Caller is not whitelisted");
         if(presale) {
+            require(isWhiteList, "Shadow Descendants 2.0: Caller is not whitelisted");
             require(msg.value >= presale_price * _mintAmount, "Shadow Descendants 2.0: insufficient funds");
         } else {
             require(msg.value >= cost * _mintAmount, "insufficient funds");
